@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../map"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "DBMSS"
+	}
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+     <link rel="stylesheet" href="../src/style.css">
+     <link rel="stylesheet" href="../src/student.css">
+     <link rel="stylesheet" href="../src/modal.css">
+     
+
+    <title>Database Management System</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+<style>
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        overflow: hidden;
+    }
+
+    input {
+        border: 2px solid gainsboro;
+    }
+
+
+    .btn-container {
+        max-width: 600px;
+        margin-inline: auto;
+        margin-top: 2rem;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .btn-container button {
+        width: 100%;
+    }
+
+    .btn {
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        border: none;
+        color: white;
+        cursor: pointer;
+    }
+
+   
+    dialog {
+        margin: auto;
+        border: none;
+        background-color: white;
+        border-radius: 10px;
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+        ;
+    }
+
+</style>
+
+</head>
+<body>
+   
+   <div class="container">
+
+        <div class="sidebar">
+            <div class="logo">
+               <img src="../assets/images/logoo.png">
+            </div>
+
+                <ul class="menu">
+
+                <li class="active">
+                   <a href="../pages/index.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+                </li>
+
+                <li>
+                    <a href="../pages/student.html"><i class="bi bi-people"></i><span>Students</span></a>
+                 </li>
+
+                 <li>
+                    <a href="#"><i class="fa-solid fa-house"></i><span>Staffs</span></a>
+                 </li>
+
+                 <li>
+                    <a href="#"><i class="fa-solid fa-house"></i><span>Volunteer</span></a>
+                 </li>
+
+                 <li>
+                    <a href="#"><i class="fa-solid fa-house"></i><span>Sponsors</span></a>
+                 </li>
+
+                 <li>
+                    <a href="#"><i class="fa-solid fa-money-bill-trend-up"></i></i><span>Expenses</span></a>
+                 </li>
+
+                 <li class="logout">
+
+                    <a href="#"><i class="fa-solid fa-house"></i><span>Logout</span></a>
+                 </li>
+                </ul>
+   </div>
+   </div>
+   
+    <div class="main--content">
+         
+
+         <div class="page-head">
+            <div class="page-head-left">
+                <!-- <div class="add-btn"><a href="#" onclick="openStudentModal()">ADD</a></div> -->
+                 <button class="add-btn" onclick="openStudentModal()">ADD</button>
+                <!-- <div class="add-btn" onclick=""><a href="form.html">DOWNLOAD</a></div> -->
+            </div>
+            <div class="page-head-right">
+                <div id="filter-container">
+                    <div id="program-container">
+                        <select id="filter_country">
+                            <option value="all">All Countries</option>
+                            
+                                <option value="Nigeria">Nigeria</option>
+                            
+                                <option value="Ghana">Ghana</option>
+                            
+                                <option value="Kenya">Kenya</option>
+                            
+                                <option value="Uganda">Uganda</option>
+                            
+                                <option value="Ethiopia">Ethiopia</option>
+                            
+                                <option value="Liberia">Liberia</option>
+                            
+                                <option value="South Africa">South Africa</option>
+                            
+                                <option value="Zimbabwe">Zimbabwe</option>
+                            
+                                <option value="Botswana" selected="">Botswana</option>
+                            
+                                <option value="Rwanda">Rwanda</option>
+                            
+                                <option value="nil">nil</option>
+                            
+                        </select>
+                    </div>
+                    <div id="program-container">
+                        <select id="programs">
+                            <option value="all" selected="">All Programs</option>
+                            
+                                <option value="ASCG">ASCG</option>
+                            
+                                <option value="CBC">CBC</option>
+                            
+                                <option value="DSC">DSC</option>
+                            
+                                <option value="SSC">SSC</option>
+                            
+                        </select>
+                    </div>
+                </div>
+        
+                <div class="page-search">
+                    <form>
+                        <input type="text" placeholder="search">
+                        <button type="submit" class="search-icon">
+                            <!-- <img src="/static/icons/search.svg" width="100%"> -->
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+         </div>
+
+        <div class="tabular--wrapper">
+
+           
+            <div class="table--container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>FIRST NAME</th>
+                            <th>LAST NAME</th>
+                            <th>DATE OF BIRTH</th>
+                            <!-- <th>SCHOOL</th> -->
+                            <!-- <th>EMAIL</th> -->
+                            <th>PROGRAM</th>
+                            <th>COUNTRY</th>
+                            <th>YEAR</th>
+                            <th></th>
+                           
+                        </tr>  
+                    </thead>
+                        <tbody>
+                            <!-- <tr>
+                                <td>Noelle</td>
+                                <td>Yusuf</td>
+                                <td>15/12/2024</td>   
+                                 <td>CBC</td>
+                                <td>2021</td>
+                                <td>Nigeria</td>
+                                
+                            </tr> -->
+                        </tbody>
+                   
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    
+            </div>
+        </div>
+
+    </div>
+
+<dialog>
+<h1>Student's Data</h1>
+    <form id="addStudent">
+        <div class="form-container">
+            <div class="item">
+                <label for="fName">
+                    First Name
+                </label>
+                <input name="fName" id="fName" type="text">
+            </div>
+            <div class="item">
+                <label for="lName">
+                    Last Name
+                </label>
+                <input name="lName" id="lName" type="text">
+            </div>
+            <div class="item">
+                <label for="dob">
+                    Date of Birth
+                </label>
+                <input name="dob" id="dob" type="date">
+            </div>
+            <div class="item">
+                <label for="program">
+                    Program
+                </label>
+                <input name="program" id="program" type="text">
+            </div>
+            <div class="item">
+                <label for="country">
+                    Country
+                </label>
+                <input name="country" id="country" type="text">
+            </div>
+            <div class="item">
+                <label for="year">
+                    Year
+                </label>
+                <input name="year" id="year" type="number">
+            </div>
+        </div>
+        <button>Submit</button>
+        <button id="closeForm" onclick="closeModal()">Close</button>
+        
+    </form>
+
+
+</dialog>
+
+
+
+<script>
+
+      const tb = document.querySelector('tbody')
+      const form = document.querySelector('form')
+      const closeModall = document.getElementById('closeForm')
+      const openForm = document.querySelector("dialog")
+
+
+    function openStudentModal(){
+        openForm.showModal()
+    }
+
+    function closeModal(){
+
+    closeModall.close()
+    }
+
+
+
+
+
+
+      function createEl(arg) {
+          return document.createElement(arg)
+      }
+
+      async function fetchStudents() {
+          try {
+              const body = await fetch("https://dbms-dxyg.onrender.com/students")
+              const data = await body.json()
+              console.log(data)
+              data.map(x => {
+                  const newDate = new Date(x.dob)
+                  const date = new Intl.DateTimeFormat('en-US', {
+                      year: 'numeric',
+                      month: "numeric",
+                      day: "numeric"
+                  }).format(newDate)
+
+                  const row = createEl('tr')
+                  const fName = createEl('td')
+                  const lName = createEl('td')
+                  const dob = createEl('td')
+                  const program = createEl('td')
+                  const year = createEl('td')
+                  const action = createEl('td')
+
+                  fName.innerText = x.fName
+                  lName.innerText = x.lName
+                  dob.innerText = date
+                  program.innerText = x.program
+                  year.innerText = x.year
+                  action.innerHTML = `<a class="action" href="update.html?id=${x._id}">View more</a>`
+
+                  row.appendChild(fName)
+                  row.appendChild(lName)
+                  row.appendChild(dob)
+                  row.appendChild(program)
+                  row.appendChild(year)
+                  row.appendChild(action)
+
+                  tb.appendChild(row)
+              })
+          } catch (err) {
+              console.log(err)
+          }
+      }
+
+      fetchStudents()
+
+      form.addEventListener('submit', async e => {
+          e.preventDefault()
+
+          try {
+              const formData = new FormData(e.target)
+              const data = JSON.stringify(Object.fromEntries(formData))
+              console.log(data)
+              const res = await fetch("https://dbms-dxyg.onrender.com/students", {
+                  method: "POST",
+                  headers: {
+                      'Content-Type': "application/json"
+                  },
+                  body: data
+              })
+
+              const dt = await res.json()
+            //   window.location.href = 'student.html';
+              window.locaton.reload();
+          } catch (err) {
+              console.log(err)
+          }
+      })
+
+</script>
+
+
+</body>
+</html>

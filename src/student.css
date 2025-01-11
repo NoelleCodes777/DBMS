@@ -1,0 +1,283 @@
+/*students */
+
+.page-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-head-left{
+    display: flex;
+    text-align: center;
+    gap: 10px;
+    align-items: center;
+  
+}
+.page-head-left a{
+    text-decoration: none;
+    color: #222222;
+}
+
+.page-head-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-search form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width:200px;
+    padding: 0px 10px;
+}
+
+#filter-container{
+    display: flex;
+}
+
+#program-container{
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+#program-container div{
+    font-size: 14px;
+}
+
+#program-container select{
+   margin-left: 5px;
+   height: 35px;
+   border:0;
+   border-radius: 5px;
+   padding: 0px 5px;
+}
+
+.search-icon{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.page-search input{
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.page-head-right input:focus{
+    outline: none;
+}
+
+/* btns */
+.add-btn{
+background: #a6ce39;
+width: fit-content;
+height: auto;
+padding: 10px;
+border-radius: 5px;
+}
+
+.ASCG1{
+
+background: #00aeef;
+width: fit-content;
+height: auto;
+padding: 10px;
+border-radius: 5px;
+}
+
+
+.SC{
+    background-color: #9A95C8;
+}
+
+.CBC{
+    background-color: #D92121;
+}
+
+/* Tabular session */
+
+.tabular--wrapper{
+   
+background:#ccc;
+margin-top: 2rem;
+padding: 1rem;
+border-radius: 10px;
+
+}
+.table--container{
+    width: 100%;
+}
+table{
+    width: 100%;
+   border-collapse: collapse;
+}
+thead{
+   font-weight: 50;
+   font-size: 15px;
+   color: #00aeef;
+}
+th{
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table */
+
+
+/* 
+form {
+    margin-top: 4rem;
+    width: 600px;
+    margin-inline: auto;
+
+} */
+
+
+
+th,
+td {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.37);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+form button {
+    width: 50%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-inline: auto;
+}
+
+label,
+input,
+button {
+    display: block;
+    font-family: inherit;
+
+}
+
+input {
+    width: 100%;
+    padding: 2px 10px;
+    border-radius: 5px;
+    min-height: 40px;
+    outline: none;
+    border: none;
+    margin-top: 2px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.action {
+    padding: 5px;
+    font-size: 10px;
+    background-color: black;
+    color: gainsboro;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.action:hover {
+    background-color: gainsboro;
+    color: black;
+}
+
+
+/* h1 {
+    text-align: center;
+}
+
+form {
+    overflow: hidden;
+}
+
+input {
+    border: 2px solid gainsboro;
+}
+
+.details-container {
+    display: grid;
+    max-width: 600px;
+    margin-inline: auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #1E1E1E;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+.value {
+    color: rgba(0, 9, 87, 1.0);
+    font-size: 1.3rem;
+}
+
+.btn-container {
+    max-width: 600px;
+    margin-inline: auto;
+    margin-top: 2rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.btn-container button {
+    width: 100%;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.green {
+    background-color: #16C47F;
+}
+
+.red {
+    background-color: #A31D1D;
+}
+
+dialog {
+    margin: auto;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    ;
+}
+
+ */
